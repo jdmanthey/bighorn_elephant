@@ -1,0 +1,25 @@
+#EM2019 blueprint file
+#input setting
+popid: EM2019 # id of the population (no white space)
+nseq: 132 # number of sequences
+L: 22613354 # total number of observed nucleic sites, including polymorphic and monomorphic
+whether_folded: false # whether the SFS is folded (true or false)
+SFS: 50414.67547977597 3739.909331361926 1636.195931089526 1378.686852129969 1281.250072579389 1253.754918392797 1170.814998862277 1088.697064003281 1041.91469432858 1019.391006857743 1006.155126110128 986.5601894557064 929.0556768449119 844.0261041156123 796.8544753776489 776.9768163501467 719.39222349353 681.5613649565804 659.0103242024048 630.2852448852187 604.0168633769109 580.3102054970575 546.4216848647063 525.6572258036168 522.0553329957852 502.9325106272164 481.7353133327085 462.0635282159035 446.1441239362318 429.0347726984094 413.6451468131601 400.6893573150239 389.4053324621952 385.4401083540564 380.9599005746425 376.8241375039722 371.717804623118 366.1385006489804 349.7146487799579 334.1860001007663 317.3124358574431 315.3861723195216 311.600495710745 298.5528143974119 283.8223044789576 278.5097460207675 279.7825576324111 276.2071720996435 267.2755406312332 260.0344918948612 258.7372185038255 258.4872809269107 260.772855195596 261.0243659863215 262.5564401063681 268.4026723896602 267.4870374749955 258.2892940506954 256.9616064925937 258.4802457118342 257.0687089999562 254.051754589368 252.8675086232268 261.2208308222933 279.6477453652137 145.3347839182878 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 # snp frequency spectrum: number of singleton, number of doubleton, etc. (separated by white space)
+#smallest_size_of_SFS_bin_used_for_estimation: 1 # default is 1; to ignore singletons, uncomment this line and change this number to 2
+#largest_size_of_SFS_bin_used_for_estimation: 29 # default is n-1; to ignore singletons, uncomment this line and change this number to nseq-2
+pct_training: 0.67 # percentage of sites for training
+nrand: 32	65	97	130 # number of random break points for each try (separated by white space)
+project_dir: EM2019 # project directory
+stairway_plot_dir: stairway_plot_es # directory to the stairway plot files
+ninput: 200 # number of input files to be created for each estimation
+#random_seed: 6
+#output setting
+mu: 1.134e-08 # assumed mutation rate per site per generation (1.89E-9 * 6)
+year_per_generation: 6 # assumed generation time (in years)
+#plot setting
+plot_title: EM2019_plot # title of the plot
+xrange: 0.1,1000 # Time (1k year) range; format: xmin,xmax; "0,0" for default
+yrange: 0,0 # Ne (1k individual) range; format: xmin,xmax; "0,0" for default
+xspacing: 2 # X axis spacing
+yspacing: 2 # Y axis spacing
+fontsize: 12 # Font size

@@ -1,0 +1,25 @@
+#EM2017 blueprint file
+#input setting
+popid: EM2017 # id of the population (no white space)
+nseq: 144 # number of sequences
+L: 27285432 # total number of observed nucleic sites, including polymorphic and monomorphic
+whether_folded: false # whether the SFS is folded (true or false)
+SFS: 89908.19818328573 7167.131847763635 2356.663458670768 1828.64300931025 1605.49153303485 1450.029035465655 1363.215901762863 1357.529528719515 1377.72464650103 1330.751649684623 1249.748057569446 1126.876065219177 1066.521518223718 1034.123880073953 1017.040412962903 970.0657812746108 903.0461051123624 859.7586234597744 811.0005818816577 800.7596441487811 768.0553095573356 739.116613565334 717.3342234526746 698.7280145640174 671.2153008202238 645.451364038553 619.4754226378057 605.3180359069188 593.9786713640816 576.3963425973247 552.3602400739815 545.2682450813329 532.2275541263343 516.5923952193187 503.5022602165799 488.4789581823786 471.6866274015441 457.1409888844034 444.7650703143154 433.4386595051574 418.6872660836245 404.1329130766875 402.4451842094115 404.2029440956991 401.226302974719 395.8556851196837 390.5005747865044 380.2749170830414 365.3807848281116 348.4182477788909 334.8992448068298 332.9931987380782 342.6014913481053 349.1540976920905 343.4572608516202 328.5007594399313 316.3002168898809 311.3088270075962 307.5088540503249 307.9859554129452 314.5395295914062 321.3734756897358 321.2517706348857 318.8099493352746 318.8887651420069 316.4741178651184 318.3085130679813 327.709961568991 339.6687912058397 359.0368034069107 386.6110023911264 200.8314109332993 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 # snp frequency spectrum: number of singleton, number of doubleton, etc. (separated by white space)
+#smallest_size_of_SFS_bin_used_for_estimation: 1 # default is 1; to ignore singletons, uncomment this line and change this number to 2
+#largest_size_of_SFS_bin_used_for_estimation: 29 # default is n-1; to ignore singletons, uncomment this line and change this number to nseq-2
+pct_training: 0.67 # percentage of sites for training
+nrand: 35	71	106	142 # number of random break points for each try (separated by white space)
+project_dir: EM2017 # project directory
+stairway_plot_dir: stairway_plot_es # directory to the stairway plot files
+ninput: 200 # number of input files to be created for each estimation
+#random_seed: 6
+#output setting
+mu: 1.134e-08 # assumed mutation rate per site per generation (1.89E-9 * 6)
+year_per_generation: 6 # assumed generation time (in years)
+#plot setting
+plot_title: EM2017_plot # title of the plot
+xrange: 0.1,1000 # Time (1k year) range; format: xmin,xmax; "0,0" for default
+yrange: 0,0 # Ne (1k individual) range; format: xmin,xmax; "0,0" for default
+xspacing: 2 # X axis spacing
+yspacing: 2 # Y axis spacing
+fontsize: 12 # Font size
