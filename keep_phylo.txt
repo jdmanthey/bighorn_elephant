@@ -9,6 +9,11 @@ GabbsValley_NV__NV98002
 GabbsValley_NV__NV98003
 GabbsValley_NV__NV98004
 GabbsValley_NV__NV98005
+GabbsValley_NV__NV98015
+GabbsValley_NV__NV98016
+GabbsValley_NV__NV98017
+GabbsValley_NV__NV98018
+GabbsValley_NV__NV98019
 MuddyMtns_NV__NV94001
 MuddyMtns_NV__NV94008
 MuddyMtns_NV__NV94009
