@@ -1,6 +1,8 @@
 # interactive session
 interactive -p quanah
 
+module load gnu7/7.3.0
+
 # set working directory
 workdir=/lustre/scratch/jmanthey/23_bighorn_elephant/08_ne
 cd $workdir
