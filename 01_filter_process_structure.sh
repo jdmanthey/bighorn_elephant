@@ -127,7 +127,7 @@ cd ..
 
 
 ########################################
-######## admixture and pca
+######## pca
 ########################################
 
 cd 01_structure/
@@ -143,19 +143,6 @@ plink --file structure --recode12 --allow-extra-chr --out structure_plink
 
 # run  dataset for pca
 plink --file structure_plink --pca --allow-extra-chr --out structure_plink_pca
-
-# run vcftools for the vcf intended for admixture with plink output
-vcftools --vcf structure.recode.vcf --plink --chrom-map chrom_map.txt --out admixture
-
-# convert with plink for admixture dataset
-plink --file admixture --recode12 --allow-extra-chr --out admixture_plink
-
-
-# run each dataset for admixture
-# all bighorn 
-for K in 1 2 3 4 5 6 7; do admixture --cv admixture_plink.ped $K  | tee log_elephant_${K}.out; done
-
-cd ..
 
 
 
