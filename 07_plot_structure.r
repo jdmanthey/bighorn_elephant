@@ -37,48 +37,6 @@ points(pca_bighorn[populations == "Elephant2000",2:3], bg=plot_colors2[1], col="
 
 
 
-# read in admixture results desert bighorn
-admixture2 <- read.table("structure_plink.2.Q")
-admixture3 <- read.table("structure_plink.3.Q")
-admixture4 <- read.table("structure_plink.4.Q")
-admixture5 <- read.table("structure_plink.5.Q")
-admixture6 <- read.table("structure_plink.6.Q")
-admixture7 <- read.table("structure_plink.7.Q")
-
-# population plot order
-# GabbsValley_NV, FishCreek_CA, KofaMtns_AZ, Sonora_MEX, BlackMtns_AZ, MuddyMtns_NV, Elephant
-populations2 <- populations
-populations2[populations2 == "Elephant2000"] <- "Elephant"
-populations2[populations2 == "Elephant2017"] <- "Elephant"
-populations2[populations2 == "Elephant2019"] <- "Elephant"
-populations_unique <- unique(populations2)
-populations_unique <- populations_unique[c(2, 7, 1, 5, 4, 3, 6)]
-
-# determine order of individuals
-ordered_inds <- c()
-for(a in 1:length(populations_unique)) {
-	ordered_inds <- c(ordered_inds, seq(from=1, to=length(populations), by=1)[populations2 == populations_unique[a]])
-}
-individual_order <- pca_bighorn[ordered_inds,1]
-admixture2 <- admixture2[ordered_inds, ]
-admixture3 <- admixture3[ordered_inds, ]
-admixture4 <- admixture4[ordered_inds, ]
-
-# determine order of clusters for plotting
-# first, plot them all basically to check
-par(mfrow=c(3, 1))
-par(mar=c(0.1, 0.1, 0.1, 0.1))
-par(lwd=0.5)
-plot_colors <- brewer.pal(n = 8, name = "Dark2")[c(6,2,7,1,8,5,4)]
-admixture3 <- admixture3[,c(1,2,3)]
-admixture4 <- admixture4[,c(1,2,3,4)]
-barplot(t(admixture2), col=plot_colors, yaxt="n", xaxt="n")
-barplot(t(admixture3[,c(1,2,3)]), col=plot_colors, yaxt="n", xaxt="n")
-barplot(t(admixture4[,c(1,2,3,4)]), col=plot_colors, yaxt="n", xaxt="n")
-
-
-
-
 
 
 
